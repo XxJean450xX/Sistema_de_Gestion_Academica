@@ -46,4 +46,4 @@ Este proyecto es una aplicación de escritorio desarrollada en Java utilizando S
 4. Ejecuta el programa con doble clic, o desde la consola:
 
 ```bash
-java -jar SistemaGestionAcademica.jar
+java -jar App_Ejecutable.jar
