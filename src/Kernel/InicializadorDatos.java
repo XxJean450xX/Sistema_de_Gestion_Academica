@@ -9,8 +9,23 @@ import Persistencia.GestionSolicitudes;
 import Persistencia.GestorMaterias;
 import Persistencia.GestorUsuarios;
 
+/**
+ * La clase `InicializadorDatos` se encarga de poblar el sistema con datos iniciales
+ * como un administrador por defecto y un conjunto de materias de prueba.
+ * Esto es útil para configurar el entorno por primera vez sin necesidad de entrada manual.
+ */
 public class InicializadorDatos {
 
+	/**
+     * Inicializa los datos esenciales del sistema, incluyendo:
+     * 1. La creación de un usuario administrador por defecto si no existe.
+     * 2. La adición de un conjunto de materias de prueba si no hay materias cargadas previamente.
+     *
+     * @param gestorUsuarios Un objeto {@link GestorUsuarios} para la gestión y persistencia de usuarios.
+     * @param gestorMaterias Un objeto {@link GestorMaterias} para la gestión y persistencia de materias.
+     * @param s Un objeto {@link GestionSolicitudes} (aunque no se utiliza directamente en este método,
+     * se pasa para la consistencia del contexto).
+     */
     public static void inicializar(GestorUsuarios gestorUsuarios, GestorMaterias gestorMaterias, GestionSolicitudes s) {
         // Crear admin si no existe
         if (gestorUsuarios.buscarUsuarioPorCodigo(1) == null) {

@@ -46,6 +46,12 @@ import javax.swing.event.ListSelectionListener;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.JComboBox;
 
+
+/**
+ * La clase `AdminGUI` representa la interfaz gráfica de usuario para el administrador del sistema.
+ * Permite al administrador realizar funciones como asignar materias a docentes y gestionar las
+ * preinscripciones de los estudiantes.
+ */
 public class AdminGUI extends JFrame {
 	private JPanel contentPane;
 
@@ -64,7 +70,11 @@ public class AdminGUI extends JFrame {
 	private JScrollPane scrollPane;
 
 	/**
-	 * Create the frame.
+	 * Crea la ventana principal de la interfaz del administrador.
+	 *
+	 * @param gestorU Objeto {@link GestorUsuarios} para la gestión de usuarios.
+	 * @param gestorM Objeto {@link GestorMaterias} para la gestión de materias.
+	 * @param s Objeto {@link GestionSolicitudes} para la gestión de solicitudes de preinscripción.
 	 */
 	public AdminGUI(GestorUsuarios gestorU, GestorMaterias gestorM, GestionSolicitudes s) {
 
@@ -1809,16 +1819,6 @@ public class AdminGUI extends JFrame {
 		btnInscribir.setBounds(82, 236, 85, 21);
 
 		cargarEstudiantesPreinscritos(gestorU, s); // Pasa los parámetros necesarios
-		JLabel imgFondo3 = new JLabel("");
-		imgFondo3.setBounds(-87, 83, 974, 461);
-		contentPane.add(imgFondo3);
-		imgFondo3.setHorizontalAlignment(SwingConstants.CENTER);
-		// Cargar y escalar la imagen
-		ImageIcon ico3 = new ImageIcon(Login.class.getResource("/Imagenes/FondoInicio.png"));
-		Image imagen3 = ico3.getImage().getScaledInstance(800, 450, Image.SCALE_SMOOTH);
-		ImageIcon imagenEscalada3 = new ImageIcon(imagen3);
-		// Asignar imagen al JLabel
-		imgFondo3.setIcon(imagenEscalada3);
 
 	}
 
@@ -1851,6 +1851,5 @@ public class AdminGUI extends JFrame {
 		listaEstudiantesPreinscritos.repaint();
 		scrollPane.revalidate();
 		scrollPane.repaint();
-		
 	}
 }

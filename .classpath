@@ -6,13 +6,39 @@
 			<attribute name="module" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="src/Librerias/jakarta.mail-2.0.1.jar">
+	<classpathentry kind="lib" path="src/Librerias/commons-logging-1.2.jar">
 		<attributes>
+			<attribute name="javadoc_location" value="jar:file:/D:/Eclipse/launcher/Sistema_Gestion_Academica/src/Librerias/pdfbox-io-3.0.5.jar!/"/>
 			<attribute name="module" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="src/Librerias/jakarta.activation-2.0.1.jar">
+	<classpathentry kind="lib" path="src/Librerias/fontbox-3.0.5.jar">
 		<attributes>
+			<attribute name="javadoc_location" value="file:/D:/Eclipse/launcher/Sistema_Gestion_Academica/src/Librerias/"/>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="src/Librerias/pdfbox-3.0.5.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="jar:file:/D:/Eclipse/launcher/Sistema_Gestion_Academica/src/Librerias/pdfbox-3.0.5.jar!/"/>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="src/Librerias/pdfbox-io-3.0.5.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="jar:file:/D:/Eclipse/launcher/Sistema_Gestion_Academica/src/Librerias/pdfbox-io-3.0.5.jar!/"/>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="src/Librerias/slf4j-api-2.0.13.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="jar:platform:/resource/Sistema_Gestion_Academica/src/Librerias/pdfbox-3.0.5.jar!/"/>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="src/Librerias/slf4j-simple-2.0.13.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="file:/D:/Eclipse/launcher/Sistema_Gestion_Academica/src/Librerias/"/>
 			<attribute name="module" value="true"/>
 		</attributes>
 	</classpathentry>

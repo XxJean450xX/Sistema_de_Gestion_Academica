@@ -36,6 +36,13 @@ import javax.swing.JComboBox;
 import javax.swing.BorderFactory;
 import javax.swing.DefaultComboBoxModel;
 
+
+/**
+ * La clase `Inicio` representa la ventana de bienvenida de la aplicación,
+ * permitiendo al usuario seleccionar su rol (Estudiante, Docente, Administrador)
+ * para proceder al inicio de sesión correspondiente.
+ * Es la primera interfaz que el usuario ve al lanzar la aplicación.
+ */
 public class Inicio extends JFrame {
 
 	private static final long serialVersionUID = 1L;
@@ -46,7 +53,14 @@ public class Inicio extends JFrame {
 
 
 	/**
-	 * Create the frame.
+	 * Crea la ventana de inicio de la aplicación.
+	 * Configura la interfaz gráfica, incluyendo el fondo, el logo,
+	 * un selector de rol y el botón de acceso. También implementa
+	 * la funcionalidad para arrastrar la ventana y cerrarla.
+	 *
+	 * @param gestorU Objeto {@link GestorUsuarios} para manejar los usuarios.
+	 * @param gestorM Objeto {@link GestorMaterias} para manejar las materias.
+	 * @param s Objeto {@link GestionSolicitudes} para manejar las solicitudes de preinscripción.
 	 */
 	public Inicio(GestorUsuarios gestorU, GestorMaterias gestorM, GestionSolicitudes s) {		
 		setLocationByPlatform(true);
@@ -127,7 +141,7 @@ public class Inicio extends JFrame {
 			panelinicio.add(comboBox);
 			
 		
-		JButton btnAcceder = new JButton("Estudiante");
+		JButton btnAcceder = new JButton("ACCEDER");
 		btnAcceder.setOpaque(true);
 		btnAcceder.setForeground(Color.WHITE);
 		btnAcceder.setFont(new Font("Leelawadee UI", Font.BOLD, 11));

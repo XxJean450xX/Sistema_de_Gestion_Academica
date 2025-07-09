@@ -8,7 +8,41 @@ import Persistencia.GestionSolicitudes;
 import Persistencia.GestorMaterias;
 import Persistencia.GestorUsuarios;
 
+/**
+ * La clase `Launcher` es el punto de entrada principal de la aplicación.
+ * Se encarga de inicializar los gestores de datos, cargar la información persistente,
+ * establecer las reconexiones entre objetos (usuarios, materias, preinscripciones)
+ * y finalmente lanzar la interfaz gráfica de usuario.
+ */
 public class Launcher {
+	/**
+     * El método `main` es el punto de inicio de la aplicación.
+     * Realiza los siguientes pasos:
+     * <ol>
+     * <li>Inicializa instancias de {@link GestorUsuarios}, {@link GestorMaterias}
+     * y {@link GestionSolicitudes} para manejar los datos del sistema.</li>
+     * <li>Llama a {@link InicializadorDatos#inicializar} para asegurar que existan
+     * datos básicos (como un administrador y materias de prueba) al iniciar la aplicación.</li>
+     * <li>Realiza procesos de **reconexión** cruciales para restaurar las relaciones
+     * entre objetos después de la deserialización:
+     * <ul>
+     * <li>**Reconexión de Profesor a Materia:** Asegura que las materias cargadas
+     * tengan una referencia correcta al objeto {@link Profesor} completo
+     * y que el profesor tenga la materia asignada.</li>
+     * <li>**Reconexión de Estudiante con Materias Inscritas:** Verifica que
+     * los objetos {@link Estudiante} tengan actualizadas sus listas
+     * de materias inscritas basándose en la información de las materias.</li>
+     * <li>**Reconexión de Preinscripciones desde Solicitudes:** Sincroniza las
+     * preinscripciones de cada {@link Estudiante} con los datos de
+     * {@link GestionSolicitudes}.</li>
+     * </ul>
+     * </li>
+     * <li>Lanza la interfaz gráfica de usuario (`GUI.Inicio`) en el
+     * Event Dispatch Thread (EDT) para garantizar la seguridad de los hilos en Swing.</li>
+     * </ol>
+     *
+     * @param args Argumentos de la línea de comandos (no utilizados en esta aplicación).
+     */
     public static void main(String[] args) {
         // Inicializa los gestores de datos
         GestorUsuarios gestorA = new GestorUsuarios();
@@ -59,7 +93,9 @@ public class Launcher {
         }
 
 
-
+        // Inicia la interfaz gráfica en el hilo EDT (Event Dispatch Thread)
+        // Esto es esencial para aplicaciones Swing para garantizar que todas
+        // las operaciones de la UI se ejecuten en el hilo correcto.
         // Inicia la interfaz gráfica en el hilo EDT
         EventQueue.invokeLater(new Runnable() {
             public void run() {
