@@ -40,7 +40,7 @@ Este proyecto es una aplicación de escritorio desarrollada en Java utilizando S
 
 ## 🚀 Cómo ejecutar el proyecto
 
-1. Ve a la carpeta [`Ejecutable-App`](./Ejecutable-App).
+1. Ve a la carpeta [`Ejecutable-App`](./Ejectuable-App).
 2. Descarga el archivo `App_Ejecutable.zip` (puedes hacerlo desde GitHub o clonando el repositorio).
 3. Extrae el archivo `.jar` desde el `.zip` si es necesario.
 4. Ejecuta el programa con doble clic, o desde la consola:
